@@ -14,7 +14,7 @@ import {
 
 
 const submitButton = document.getElementById('submit-button');
-const resetButton = document.getElementById('reset');
+const resetButton = document.getElementById('reset-button');
 
 submitButton.addEventListener("click", (e) => {
 

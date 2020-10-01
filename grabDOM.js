@@ -14,12 +14,13 @@ export const userSelection = () => document.querySelector(':checked').value;
 let wins = 0;
 let draws = 0;
 let total = 0;
+let reset = 0;
+
 let losses = () => total - wins;
 let winPercentage = () => Math.trunc((wins / total) * 100);
-let resets = 0;
 
 export function updateHTML() {
-    resultsSpan.textContent = compareSelection(rockPaperScissors(), userSelection());
+
     winPercentSpan.textContent = winPercentage();
     winsSpan.textContent = wins;
     drawsSpan.textContent = draws;
@@ -29,27 +30,32 @@ export function updateHTML() {
 
 export function incrementCounters(value) {
     if (value === "draw") {
-        winLose.textContent = 'its a draw';
+        winLose.textContent = 'womp, it\'s a draw';
         draws++;
     } else if (value === "win") {
-        winLose.textContent = 'Yay! You won!';
+        winLose.textContent = 'hey! you won!';
         wins++;
         total++;
     } else if (value === "lose") {
-        winLose.textContent = 'Ahh schucks! you lost';
+        winLose.textContent = 'aw shucks! you lost';
         total++;
     }
+
+    resultsSpan.textContent = value;
+
 }
 export function resetCounters() {
-    resets++;
+    reset++;
+
     wins = 0;
     draws = 0;
     total = 0;
+
     resultsSpan.textContent = 0;
     winPercentSpan.textContent = 0;
-    winsSpan.textContent = wins;
-    drawsSpan.textContent = draws;
-    totalSpan.textContent = total;
+    winsSpan.textContent = 0;
+    drawsSpan.textContent = 0;
+    totalSpan.textContent = 0;
     lossesSpan.textContent = 0;
-    resetCounter.textContent = `Resets: ${resets}`;
+    resetCounter.textContent = `${reset} reset(s)`;
 }

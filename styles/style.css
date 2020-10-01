@@ -19,16 +19,12 @@ body {
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color5);
 }
-.title {
-    font-family: 'Kalam', cursive;
-    font-size: 2.5em ;
-}
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: calc(var(--footer-height)); */
     background-color: var(--color5);
 }
 section {
@@ -40,13 +36,18 @@ section {
     justify-content: center;
     align-items: center;
     padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
+    padding-bottom: 10px;
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 5px var(--color1);
     font-family: 'Kalam', cursive;
     font-size: 2em;
     border-radius: 40px;
+}
+
+.title {
+    font-family: 'Kalam', cursive;
+    font-size: 2.5em ;
 }
 
 input[type="radio"]:checked + img {
@@ -71,17 +72,9 @@ input[type=radio] {
     width: 100%;
     justify-content: space-around;
     padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-
-button {
-    font-family: 'Kalam', cursive;
-    width: 200px;
-    font-size: 1.4em;
-}
-
-div {
-    margin-bottom: var(--gutter);
-}  
 
 .results-section {
     display: grid;
@@ -90,8 +83,8 @@ div {
     text-align: center;
 }
 
-span {
-    /* margin-left: 5px; */
+.results-div {
+    text-align: center;
 }
 
 .column {
@@ -99,29 +92,22 @@ span {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 15px;
-    /* text-align: left; */
 }
 
 .row {
     display: flex;
     flex-direction: column;
 }
-.button {
+
+button {
     background-image: url("../assets/button.png");
     background-position: center;
-    background-size:  200px 55px;
     font-size: .75em;
-    height: 55px;
-    width: 100px;
     border-radius: 15px;
-}
-.image1 {
-    background-blend-mode: multiply;
+    font-family: 'Kalam', cursive;
+    width: 200px;
 }
 
-/* 
-styling:
-work on min-width breakpoints
-fix section height 
-stylize text
-*/
+#submit-button, #reset-button {
+    margin-bottom: 20px;
+}
