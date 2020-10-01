@@ -89,7 +89,7 @@ div {
 }
 
 span {
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 
 .column {
@@ -104,3 +104,10 @@ span {
     display: flex;
     flex-direction: column;
 }
+
+/* 
+styling:
+work on min-width breakpoints
+fix section height 
+stylize text
+*/

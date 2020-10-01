@@ -28,7 +28,6 @@ export function updateHTML() {
 export function incrementCounters(value) {
     if (value === "draw") {
         draws++;
-        total++;
     } else if (value === "win") {
         wins++;
         total++;
