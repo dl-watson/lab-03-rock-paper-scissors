@@ -1,23 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    --color1: #ffffff;
-    --color2: #ffffff;
-    --color3: #ffffff;
-    --color4: #ffffff;
-    --color5: #ffffff;
+    --color1: #E76F51;
+    --color2: #F4A261; 
+    --color3: #E9C46A; 
+    --color4: #89B0AE; 
+    --color5: #555B6E;
 
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
@@ -25,8 +18,6 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
-
-
 }
 
 main {
@@ -34,12 +25,12 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
-    background-color: lightgrey;
+    /* margin-bottom: calc(var(--footer-height)); */
+    background-color: var(--color5);
 }
 
 section {
-    background-color: var(--color5);
+    background-color: var(--color4);
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -50,65 +41,29 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 5px var(--color1);
     font-family: 'Kalam', cursive;
     font-size: 2em;
 }
 
-header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-}
-
-footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-    font-family: 'Kalam', cursive;
-}
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-content {
-    width: 80%;
-}
-
-p {
-    margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
-
-input[type="radio"]:checked {
+input[type="radio"]:checked + img {
     transform: scale(1.2);
-    height: 250px;
-    width: 200px;
-    border: 3px solid black;
 }
 
-input[type=radio] + img {
-    width: 200px;
+input[type=radio] {
+    display:none; 
+    margin:10px;
 }
 
 #rock, #paper, #scissors {
-    height: 50px;
-    width: 100px;
+}
+
+.rock-img, .paper-img, .scissors-img {
+    height: 250px;
+    width: 200px;
+}
+
+#rock:checked, #paper:checked, #scissors:checked + label {
 }
 
 .rps-row {
@@ -126,19 +81,28 @@ button {
 
 div {
     margin-bottom: var(--gutter);
+}  
+
+.results-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-evenly;
+    text-align: center;
 }
 
-.main-section {
+span {
+    margin-left: 5px;
 }
 
-.rock-img {
-    
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px;
+    /* text-align: left; */
 }
 
-.paper-img {
-
-}
-
-.scissors-img {
-
+.row {
+    display: flex;
+    flex-direction: column;
 }
