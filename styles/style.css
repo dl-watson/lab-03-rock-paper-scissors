@@ -25,6 +25,8 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+
+
 }
 
 main {
@@ -33,6 +35,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-color: lightgrey;
 }
 
 section {
@@ -48,6 +51,8 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    font-family: 'Kalam', cursive;
+    font-size: 2em;
 }
 
 header {
@@ -63,6 +68,7 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    font-family: 'Kalam', cursive;
 }
 
 h2 {
@@ -90,19 +96,49 @@ footer {
 }
 
 input[type="radio"]:checked {
-    transform: scale(1.4);
-    }
+    transform: scale(1.2);
+    height: 250px;
+    width: 200px;
+    border: 3px solid black;
+}
+
+input[type=radio] + img {
+    width: 200px;
+}
 
 #rock, #paper, #scissors {
-    height: 100px;
+    height: 50px;
     width: 100px;
 }
 
 .rps-row {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+button {
+    font-family: 'Kalam', cursive;
+    width: 200px;
+    font-size: 1.4em;
 }
 
 div {
     margin-bottom: var(--gutter);
+}
+
+.main-section {
+}
+
+.rock-img {
+    
+}
+
+.paper-img {
+
+}
+
+.scissors-img {
+
 }

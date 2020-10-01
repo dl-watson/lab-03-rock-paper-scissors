@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
@@ -20,33 +21,40 @@
         <section class="main-section">
             <div class="rps-row">
                 <!-- rock paper scissors radio buttons -->
-                <input type="radio" id="rock" value="rock"name="r-p-s" />
-               <label for="rock">rock</label>
-           
-               <input type="radio" id="paper" value="paper"name="r-p-s" checked/>
-               <label for="contactChoice2">paper</label>
-           
-               <input type="radio" id="scissors" value="scissors"name="r-p-s" />
-               <label for="scissors">scissors</label>
+                <label for="rock">
+                    <input type="radio" id="rock" value="rock"name="r-p-s" />
+                    <img src="./assets/rock.svg" class="rock-img" alt="rock">
+                </label>
+                <label for="paper">
+                    <input type="radio" id="paper" value="paper"name="r-p-s" checked/>
+                    <img src="./assets/paper.svg" class="paper-img" alt="paper">
+                </label>
+                <label for="scissors">
+                    <input type="radio" id="scissors" value="scissors"name="r-p-s" />
+                    <img src="./assets/scissors.svg"" class="scissors-img" alt="scissors">
+                </label>
 
             </div>
             <div>
                 <button id="submit-button">GO!</button>
             </div>
             <div>
-                <span id="result-span">result</span>
+                Result: <span id="result-span">0</span>
             </div>
             <div>
-                <span id="wins-span">wins</span>
+                Wins: <span id="wins-span">0</span>
             </div>
             <div>
-                <span id="losses-span">losses</span>
+                Losses: <span id="losses-span">0</span>
             </div>
             <div>
-                <span id="draws-span">draws</span>
+                Draws: <span id="draws-span">0</span>
             </div>
             <div>
-                <span id="win-percent-span">win percentage</span>
+                Total: <span id="total-span">0</span>
+            </div>
+            <div>
+                Percentage: <span id="win-percent-span">0</span>%
             </div>
         </section>
     </main>
@@ -54,7 +62,7 @@
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
     </footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./clickHandlers.js"></script>
 </body>
 
 </html>
