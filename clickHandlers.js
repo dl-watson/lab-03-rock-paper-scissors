@@ -6,13 +6,15 @@ import {
 } from './logic.js';
 
 import {
+    resetCounters,
     updateHTML,
     incrementCounters,
     userSelection
 } from './grabDOM.js';
 
 
-const submitButton = document.querySelector("button");
+const submitButton = document.getElementById('submit-button');
+const resetButton = document.getElementById('reset');
 
 submitButton.addEventListener("click", (e) => {
 
@@ -21,5 +23,9 @@ submitButton.addEventListener("click", (e) => {
     incrementCounters(value);
 
     updateHTML();
+
+});
+resetButton.addEventListener('click', () => {
+    resetCounters();
 
 });

@@ -16,6 +16,7 @@
 <body>
     <main>
         <section class="main-section">
+            <span class="title">Rock Paper Scissors</span>
             <div class="rps-row">
                 <!-- rock paper scissors radio buttons -->
                 <label for="rock" class="rock-label">
@@ -30,13 +31,12 @@
                     <input type="radio" id="scissors" value="scissors" name="r-p-s" />
                     <img src="./assets/scissors.svg"" class="scissors-img" alt="scissors">
                 </label>
-
             </div>
-
             <div>
-                <button id="submit-button">GO!</button>
+                <button id="submit-button" class="button">GO!</button>
             </div>
-
+            <div id="win-lose">
+            </div>
             <div class="results-section">
                 <div class="column">
                     <div class="row">
@@ -67,6 +67,12 @@
                     <div class="row">
                     %age: <span id="win-percent-span">0</span>
                     </div>
+                </div>
+            </div>
+            <div>
+                <button id="reset" class="button">Reset</button>
+                <div id="reset-counter">
+                    Resets:
                 </div>
             </div>
         </section>

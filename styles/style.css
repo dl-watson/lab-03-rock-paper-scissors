@@ -19,7 +19,10 @@ body {
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color5);
 }
-
+.title {
+    font-family: 'Kalam', cursive;
+    font-size: 2.5em ;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -28,7 +31,6 @@ main {
     /* margin-bottom: calc(var(--footer-height)); */
     background-color: var(--color5);
 }
-
 section {
     background-color: var(--color4);
     width: 1000px;
@@ -103,6 +105,18 @@ span {
 .row {
     display: flex;
     flex-direction: column;
+}
+.button {
+    background-image: url("../assets/button.png");
+    background-position: center;
+    background-size:  200px 55px;
+    font-size: .75em;
+    height: 55px;
+    width: 100px;
+    border-radius: 15px;
+}
+.image1 {
+    background-blend-mode: multiply;
 }
 
 /* 
