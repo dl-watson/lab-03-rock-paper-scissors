@@ -17,7 +17,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: var(--color5);
 }
 
 main {
@@ -44,10 +44,14 @@ section {
     border: solid 5px var(--color1);
     font-family: 'Kalam', cursive;
     font-size: 2em;
+    border-radius: 40px;
 }
 
 input[type="radio"]:checked + img {
     transform: scale(1.2);
+    background-color: rgba(117, 190, 218, 0.5);
+    border-radius: 40px;
+    box-shadow: 4px 1px 2px var(--color3);
 }
 
 input[type=radio] {
@@ -55,15 +59,8 @@ input[type=radio] {
     margin:10px;
 }
 
-#rock, #paper, #scissors {
-}
-
 .rock-img, .paper-img, .scissors-img {
-    height: 250px;
     width: 200px;
-}
-
-#rock:checked, #paper:checked, #scissors:checked + label {
 }
 
 .rps-row {
@@ -71,6 +68,7 @@ input[type=radio] {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    padding: 10px;
 }
 
 button {
