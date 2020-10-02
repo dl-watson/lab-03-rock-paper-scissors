@@ -16,7 +16,7 @@ let draws = 0;
 let total = 0;
 let reset = 0;
 
-let losses = () => total - wins;
+let losses = () => (total - wins - draws);
 let winPercentage = () => Math.trunc((wins / total) * 100);
 
 export function updateHTML() {
@@ -32,6 +32,7 @@ export function incrementCounters(value) {
     if (value === "draw") {
         winLose.textContent = 'womp, it\'s a draw';
         draws++;
+        total++;
     } else if (value === "win") {
         winLose.textContent = 'hey! you won!';
         wins++;
