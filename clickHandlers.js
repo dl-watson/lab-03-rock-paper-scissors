@@ -16,7 +16,7 @@ import {
 const submitButton = document.getElementById('submit-button');
 const resetButton = document.getElementById('reset-button');
 
-submitButton.addEventListener("click", (e) => {
+submitButton.addEventListener("click", () => {
 
     const value = compareSelection(rockPaperScissors(), userSelection());
 

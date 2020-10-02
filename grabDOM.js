@@ -1,5 +1,4 @@
-import { compareSelection, rockPaperScissors } from './logic.js';
-
+//did not need import functions
 const resultsSpan = document.getElementById("result-span");
 const winsSpan = document.getElementById("wins-span");
 const lossesSpan = document.getElementById("losses-span");
