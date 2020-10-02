@@ -17,27 +17,16 @@ export function rockPaperScissors() {
 
 // checkResult
 export function compareSelection(computer, player) {
-    let result;
-
-    if (computer === 'rock' && player === 'rock') {
-        result = 'draw';
+// there is less code and it is easer to read 
+    if (computer === player) {
+        return 'draw';
     } else if (computer === 'rock' && player === 'paper') {
-        result = 'win';
-    } else if (computer === 'rock' && player === 'scissors') {
-        result = 'lose';
-    } else if (computer === 'paper' && player === 'rock') {
-        result = 'lose';
-    } else if (computer === 'paper' && player === 'paper') {
-        result = 'draw';
+        return 'win';
     } else if (computer === 'paper' && player === 'scissors') {
-        result = 'win';
+        return 'win';
     } else if (computer === 'scissors' && player === 'rock') {
-        result = 'win';
-    } else if (computer === 'scissors' && player === 'paper') {
-        result = 'lose';
-    } else if (computer === 'scissors' && player === 'scissors') {
-        result = 'draw';
+        return 'win';
+    } else {
+        return 'lose';
     }
-
-    return result;
 }
